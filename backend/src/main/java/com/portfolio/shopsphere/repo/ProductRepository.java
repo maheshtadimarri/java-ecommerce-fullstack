@@ -1,0 +1,1 @@
+package com.portfolio.shopsphere.repo;import com.portfolio.shopsphere.model.Product;import org.springframework.data.jpa.repository.JpaRepository;import java.util.*;public interface ProductRepository extends JpaRepository<Product,Long>{List<Product>findByNameContainingIgnoreCaseOrCategoryContainingIgnoreCase(String n,String c);}

@@ -1,0 +1,1 @@
+create table products(id bigserial primary key,name varchar(255) not null,category varchar(255) not null,price numeric(12,2) not null,stock integer not null,description varchar(2000));create table orders(id bigserial primary key,customer_email varchar(255) not null,total numeric(12,2) not null,status varchar(50) not null,created_at timestamp with time zone not null);

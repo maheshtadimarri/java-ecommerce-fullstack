@@ -1,0 +1,1 @@
+package com.portfolio.shopsphere.repo;import com.portfolio.shopsphere.model.Order;import org.springframework.data.jpa.repository.JpaRepository;import java.util.*;public interface OrderRepository extends JpaRepository<Order,Long>{List<Order>findByCustomerEmailIgnoreCase(String email);}

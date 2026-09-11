@@ -1,0 +1,10 @@
+services:
+ postgres:
+  image: postgres:16
+  environment:
+   POSTGRES_DB: shopsphere
+   POSTGRES_USER: shopsphere
+   POSTGRES_PASSWORD: shopsphere
+  ports: ['5433:5432']
+  volumes: [shopsphere-data:/var/lib/postgresql/data]
+volumes: {shopsphere-data: {}}
