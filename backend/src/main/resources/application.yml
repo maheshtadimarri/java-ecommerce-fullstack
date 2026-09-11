@@ -1,11 +1,21 @@
 spring:
- datasource:
-  url: ${DB_URL:jdbc:postgresql://localhost:5433/shopsphere}
-  username: ${DB_USER:shopsphere}
-  password: ${DB_PASSWORD:shopsphere}
- jpa:
-  hibernate:
-   ddl-auto: validate
-  open-in-view: false
- flyway: {enabled: true}
-server: {port: 8081}
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5433/shopsphere}
+    username: ${DB_USER:shopsphere}
+    password: ${DB_PASSWORD:shopsphere}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+server:
+  port: ${PORT:8081}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
